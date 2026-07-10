@@ -1,0 +1,59 @@
+/* grid-repair :: fuse widget (PLACEHOLDER styling)
+   Transparent page, ONE corner-anchored panel. Never full-viewport, never a
+   centered/dimmed modal (STYLE_GUIDE "Overlay NUI rules"). */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: transparent; /* required: the game renders behind the widget */
+    font-family: "Segoe UI", Arial, sans-serif;
+    overflow: hidden;
+}
+
+.hidden { display: none; }
+
+#fuse-widget {
+    position: absolute;
+    right: 24px;            /* corner-anchored, not centered */
+    bottom: 24px;
+    width: 320px;           /* well under the ~420px / 30% budget */
+    padding: 14px 16px;
+    background: rgba(18, 20, 24, 0.88);
+    border-left: 3px solid #ff9800;
+    border-radius: 6px;
+    color: #f2f2f2;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ff9800;
+    margin-bottom: 8px;
+}
+
+.seq {
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.timer {
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+/* JS sets the bar width each frame; it starts at 0 and never spans the page. */
+#timer-bar {
+    height: 6px;
+    width: 0;
+    background: #ff9800;
+    transition: width linear;
+}
+
+.hint {
+    margin-top: 8px;
+    font-size: 11px;
+    opacity: 0.6;
+}

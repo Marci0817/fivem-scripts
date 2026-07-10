@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waybill Delivery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="waybillWidget" class="waybill-widget hidden">
+        <div class="waybill-panel">
+            <!-- Header: Client and Destination -->
+            <div class="waybill-header">
+                <div class="header-client">
+                    <span class="client-name" id="clientName"></span>
+                </div>
+                <div class="header-destination">
+                    <span id="destination"></span>
+                </div>
+            </div>
+
+            <!-- Items Checklist -->
+            <div class="waybill-items">
+                <div id="itemsList" class="items-list"></div>
+            </div>
+
+            <!-- Footer: Time, Payout, Status -->
+            <div class="waybill-footer">
+                <div class="footer-left">
+                    <div class="time-display">
+                        <span id="timeRemaining" class="time-value">00:00</span>
+                    </div>
+                </div>
+                <div class="footer-center">
+                    <span id="statusBadge" class="status-badge">Assigned</span>
+                </div>
+                <div class="footer-right">
+                    <div class="payout-display">
+                        <span id="payout" class="payout-value">$0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

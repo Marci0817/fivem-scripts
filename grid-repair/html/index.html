@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+  grid-repair :: fuse-sequence minigame widget  (PLACEHOLDER)
+
+  TODO(nui-developer): build the real compact overlay here. This stub only
+  proves the plumbing (start message -> callbacks) and prevents a focus
+  soft-lock during QA of the Lua stage. Keep it corner-anchored, transparent
+  background, never full-viewport (STYLE_GUIDE "Overlay NUI rules").
+
+  Message contract (also documented in client/main.lua):
+    IN  : { action:'startFuseGame', sequence:[int], fuseCount:int, timeLimit:int }
+    IN  : { action:'endFuseGame' }
+    OUT : POST fuseResult { success:bool, entered:[int] }
+    OUT : POST fuseCancel {}
+-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="fuse-widget" class="hidden">
+        <div class="title">Fuse Repair (placeholder)</div>
+        <div id="seq" class="seq"></div>
+        <div id="timer" class="timer"><div id="timer-bar"></div></div>
+        <div class="hint">TODO nui-developer: real fuse buttons. Esc = cancel.</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
